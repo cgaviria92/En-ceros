@@ -1,0 +1,25 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = login__email, login__password, login__password-error, login__email-error, login__btn-login
+-->
+<div class="login-container">
+  <h1>Login</h1>
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <div>
+      <label for="login__email">Email</label>
+      <input id="login__email" name="email" type="email" [(ngModel)]="email" #emailInput="ngModel" required />
+      <div id="login__email-error" *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="error">
+        <div *ngIf="emailInput.errors?.['required']">Email is required</div>
+      </div>
+    </div>
+    <div>
+      <label for="login__password">Password</label>
+      <input id="login__password" name="password" type="password" [(ngModel)]="password" #passwordInput="ngModel" required minlength="8" />
+      <div id="login__password-error" *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)" class="error">
+        <div *ngIf="passwordInput.errors?.['required']">Password is required</div>
+        <div *ngIf="passwordInput.errors?.['minlength']">The minimum of characters will be 8</div>
+      </div>
+    </div>
+    <button id="login__btn-login" type="submit" [disabled]="loginForm.invalid">Login</button>
+  </form>
+</div>

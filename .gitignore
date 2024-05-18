@@ -1,0 +1,55 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/package-lock.json
+/tsconfig.tsbuildinfo
+
+# Angular
+.angular/cache
+
+# IDEs and editors
+.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Misc
+.sass-cache/
+.connect/
+releases/
+build/
+libpeerconnection.log
+npm-debug.log
+testem.log
+typings/
+
+# System Files
+Thumbs.db
+Desktop.ini

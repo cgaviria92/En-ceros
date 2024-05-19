@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { AuthService } from '../../core/services/auth.service';  // Asegúrate de que la ruta es correcta
 
 @Component({
   selector: 'app-navbar',
@@ -8,11 +8,10 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent {
 
-  constructor(private router: Router) {}
+  constructor(public authService: AuthService) {}
 
   logout(): void {
-    localStorage.removeItem('token');  // Eliminar el token del localStorage
-    this.router.navigate(['/login']);  // Redirigir al usuario a la página de login
+    this.authService.logout();
   }
 }
 

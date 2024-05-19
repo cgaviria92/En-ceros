@@ -4,7 +4,7 @@ import { HomeUserComponent } from './feature/users/home-user/home-user.component
 import { ListUsersComponent } from './feature/users/list-users/list-users.component';
 import { CreateUserComponent } from './feature/users/create-user/create-user.component';
 import { LoginComponent } from './feature/login/login/login.component';
-import { AuthGuard } from './guards/auth.guard';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },

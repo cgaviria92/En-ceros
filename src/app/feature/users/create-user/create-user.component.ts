@@ -13,7 +13,7 @@ export class CreateUserComponent implements OnInit {
 
   constructor(
     private readonly router: Router,
-    private usersService: UsersService  // Inyectamos el servicio de usuarios
+    private usersService: UsersService  // inyectamos el servicio de usuarios
   ) {}
 
   ngOnInit(): void {

@@ -1,8 +1,8 @@
 <!-- <p>navbar works!</p> -->
 <nav *ngIf="authService.isAuthenticated()">
   <ul>
-    <li><a routerLink="/users/create">Crear Usuario</a></li>
-    <li><a routerLink="/users/list">Listar Usuarios</a></li>
+    <li><a routerLink="/users/create">Creacion de Usuario</a></li>
+    <li><a routerLink="/users/list">Lista de Usuarios</a></li>
   </ul>
-  <button (click)="logout()">Cerrar Sesión</button>
+  <button (click)="logout()">Cerrar sesión</button>
 </nav>

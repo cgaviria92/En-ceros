@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../../core/services/auth.service';  // Asegúrate de que la ruta es correcta
+import { AuthService } from '../../core/services/auth.service';  // importamos servicio de autenticacion
 
 @Component({
   selector: 'app-navbar',

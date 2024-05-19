@@ -17,12 +17,12 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Método implementado para inicializar componentes, actualmente vacío.
+    // inicializar componentes.
   }
 
   onSubmit(): void {
     if (!this.email || !this.password || this.password.length < 8) {
-      // Validaciones adicionales pueden ser manejadas aquí si es necesario
+      // Validaciones del formulario
       return;
     }
 

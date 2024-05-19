@@ -4,17 +4,17 @@
 -->
 <form (ngSubmit)="createUser()" #createUserForm="ngForm">
   <div>
-    <label for="user-create__name">Name</label>
+    <label for="user-create__name">Nombre</label>
     <input id="user-create__name" name="name" type="text" [(ngModel)]="name" #nameInput="ngModel" required />
     <div id="user-create__name-error" *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" class="error">
-      <div *ngIf="nameInput.errors?.['required']">Name is required</div>
+      <div *ngIf="nameInput.errors?.['required']">Nombre es requerido</div>
     </div>
   </div>
   <div>
-    <label for="user-create__job">Job</label>
+    <label for="user-create__job">Trabajo</label>
     <input id="user-create__job" name="job" type="text" [(ngModel)]="job" #jobInput="ngModel" required />
     <div id="user-create__job-error" *ngIf="jobInput.invalid && (jobInput.dirty || jobInput.touched)" class="error">
-      <div *ngIf="jobInput.errors?.['required']">Job is required</div>
+      <div *ngIf="jobInput.errors?.['required']">Trabajo es requerido</div>
     </div>
   </div>
   <button id="user-create__btn-create" type="submit" [disabled]="createUserForm.invalid">Crear</button>

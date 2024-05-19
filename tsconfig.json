@@ -8,27 +8,25 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
-    "module": "es2020",
+    "target": "es2022",
+    "useDefineForClassFields": false,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "lib": [
-      "es2018",
+      "es2022",
       "dom"
     ],
-    "paths": {
-      "@core/*": [
-        "./src/app/core/*"
-      ],
-      "@feature/*": [
-        "./src/app/feature/*"
-      ],
-      "@shared/*": [
-        "./src/app/shared/*"
-      ],
-      "@environments/*": [
-        "./src/environments/*"
-      ]
-    }
-  }
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "e2e",
+    "**/*.spec.ts"
+  ]
 }

@@ -9,10 +9,13 @@ import { CoreModule } from './core/core.module';
 import { FeatureModule } from './feature/feature.module';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 import { AuthGuard } from './guards/auth.guard';
+import {NavBarComponent} from './feature/navbar/navbar.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavBarComponent
+    
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,8 @@ import { HomeUserComponent } from './home-user/home-user.component';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UsersRoutingModule } from './users-routing.module';
+import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { UsersRoutingModule } from './users-routing.module';
   imports: [
     CommonModule,
     RouterModule,
-    UsersRoutingModule
+    UsersRoutingModule,
+    FormsModule,
+    SharedModule
   ],
   exports: [
     NavBarComponent,

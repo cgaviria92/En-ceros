@@ -4,14 +4,15 @@ import { HomeUserComponent } from './feature/users/home-user/home-user.component
 import { ListUsersComponent } from './feature/users/list-users/list-users.component';
 import { CreateUserComponent } from './feature/users/create-user/create-user.component';
 import { LoginComponent } from './feature/login/login/login.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeUserComponent },
-  { path: 'users/list', component: ListUsersComponent },
+  { path: 'users/list', component: ListUsersComponent ,canActivate: [AuthGuard]},
   { path: 'users/create', component: CreateUserComponent },
   { path: 'login', component: LoginComponent },
-  { path: '**', redirectTo: '/home' }
+  { path: '**', redirectTo: '/login' }
 ];
 
 @NgModule({

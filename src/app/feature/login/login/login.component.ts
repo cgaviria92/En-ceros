@@ -21,6 +21,11 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
+    if (!this.email || !this.password || this.password.length < 8) {
+      // Validaciones adicionales pueden ser manejadas aquí si es necesario
+      return;
+    }
+
     this.http.post('https://reqres.in/api/login', {
       email: this.email,
       password: this.password
